@@ -1,0 +1,3 @@
+[submodule "packages/fragment-common"]
+	path = packages/fragment-common
+	url = git@github.com:arenac/fragment-common.git
