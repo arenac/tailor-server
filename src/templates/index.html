@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailor with React</title>
+  <style>
+    body {
+      background: rgba(140, 217, 240, 0.952);
+    }
+  </style>
+  <script>
+    (function (d) {
+      require(d);
+      var arr = ['react', 'react-dom', 'react-redux', 'react-router', 'redux', 'classnames'];
+      while (i = arr.pop()) (function (dep) {
+        define(dep, d, function (b) {
+          return b[dep];
+        })
+      })(i);
+    }(['http://localhost:3000/public/bundle.js']));
+  </script>
+</head>
+<body>
+  <div id="page"></div>
+  <div id="catalogs"></div>
+  <div id="contacts"></div>
+  <div id="chat"></div>
+  <!-- page -->
+  <fragment src="http://localhost:3010"></fragment>
+  <!-- contacts -->
+  <fragment src="http://localhost:3020"></fragment>
+  <!-- chat -->
+  <fragment src="http://localhost:3030"></fragment>
+  <!-- catalog -->
+  <fragment src="http://localhost:3040"></fragment>
+</body>
+</html>
